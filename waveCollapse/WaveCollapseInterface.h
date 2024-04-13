@@ -1,0 +1,14 @@
+//
+// Created by Pete Downey on 4/13/24.
+//
+
+#ifndef WAVECOLLAPSE_WAVECOLLAPSEINTERFACE_H
+#define WAVECOLLAPSE_WAVECOLLAPSEINTERFACE_H
+
+
+class WaveCollapseInterface {
+
+};
+
+
+#endif //WAVECOLLAPSE_WAVECOLLAPSEINTERFACE_H

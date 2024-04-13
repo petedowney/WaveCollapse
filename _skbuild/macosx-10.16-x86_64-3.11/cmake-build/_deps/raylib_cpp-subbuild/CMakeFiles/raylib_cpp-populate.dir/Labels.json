@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/CMakeFiles/raylib_cpp-populate"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/CMakeFiles/raylib_cpp-populate.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/CMakeFiles/raylib_cpp-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/raylib_cpp-populate-prefix/src/raylib_cpp-populate-stamp/raylib_cpp-populate-build.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/raylib_cpp-populate-prefix/src/raylib_cpp-populate-stamp/raylib_cpp-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/raylib_cpp-populate-prefix/src/raylib_cpp-populate-stamp/raylib_cpp-populate-download.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/raylib_cpp-populate-prefix/src/raylib_cpp-populate-stamp/raylib_cpp-populate-install.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/raylib_cpp-populate-prefix/src/raylib_cpp-populate-stamp/raylib_cpp-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/raylib_cpp-populate-prefix/src/raylib_cpp-populate-stamp/raylib_cpp-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/raylib_cpp-populate-prefix/src/raylib_cpp-populate-stamp/raylib_cpp-populate-test.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.11/cmake-build/_deps/raylib_cpp-subbuild/raylib_cpp-populate-prefix/src/raylib_cpp-populate-stamp/raylib_cpp-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"raylib_cpp-populate"
+		],
+		"name" : "raylib_cpp-populate"
+	}
+}

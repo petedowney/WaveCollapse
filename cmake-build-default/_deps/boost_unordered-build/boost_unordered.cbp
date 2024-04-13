@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="boost_unordered"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\raylib\;CMake Files\cmake-build-default\;CMake Files\cmake-build-default\_deps\;CMake Files\cmake-build-default\_deps\boost_unordered-src\;CMake Files\cmake-build-default\_deps\raylib_cpp-src\;CMake Files\cmake-build-default\_deps\raylib_cpp-src\include\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/lib/cmake/raylib/raylib-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\raylib\"/>
+		</Unit>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/lib/cmake/raylib/raylib-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\raylib\"/>
+		</Unit>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-default\_deps\boost_unordered-src\"/>
+		</Unit>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/raylib_cpp-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-default\_deps\raylib_cpp-src\"/>
+		</Unit>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/raylib_cpp-src/include/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-default\_deps\raylib_cpp-src\include\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

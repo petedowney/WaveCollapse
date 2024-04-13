@@ -40,11 +40,17 @@ if (NOT raylib_cpp_FOUND)
     FetchContent_MakeAvailable(raylib_cpp)
 endif()
 
+
 include_directories(boost_unordered)
+
+find_package(PythonLibs REQUIRED)
+include_directories(${PYTHON_INCLUDE_DIRS})
+
 #target_link_libraries(boost_unordered raylib raylib_cpp)
 
-add_executable(WaveCollapse source/main.cpp
-        source/Chunk.h source/Chunk.cpp source/WaveCollapse.cpp source/WaveCollapse.h)
+add_executable(WaveCollapse WaveCollapse/main.cpp
+WaveCollapse/Chunk.h WaveCollapse/Chunk.cpp WaveCollapse/WaveCollapse.cpp 
+WaveCollapse/WaveCollapse.h WaveCollapse/WaveCollapseInterface.cpp 
+WaveCollapse/WaveCollapseInterface.h)
 
-target_link_libraries(WaveCollapse raylib raylib_cpp boost_unordered)
-        
+target_link_libraries(WaveCollapse raylib raylib_cpp boost_unordered ${PYTHON_LIBRARIES})

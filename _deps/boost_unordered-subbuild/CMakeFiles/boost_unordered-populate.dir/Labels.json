@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/CMakeFiles/boost_unordered-populate"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/CMakeFiles/boost_unordered-populate.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/CMakeFiles/boost_unordered-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/boost_unordered-populate-prefix/src/boost_unordered-populate-stamp/boost_unordered-populate-install.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/boost_unordered-populate-prefix/src/boost_unordered-populate-stamp/boost_unordered-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/boost_unordered-populate-prefix/src/boost_unordered-populate-stamp/boost_unordered-populate-download.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/boost_unordered-populate-prefix/src/boost_unordered-populate-stamp/boost_unordered-populate-update.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/boost_unordered-populate-prefix/src/boost_unordered-populate-stamp/boost_unordered-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/boost_unordered-populate-prefix/src/boost_unordered-populate-stamp/boost_unordered-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/boost_unordered-populate-prefix/src/boost_unordered-populate-stamp/boost_unordered-populate-build.rule"
+		},
+		{
+			"file" : "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps/boost_unordered-subbuild/boost_unordered-populate-prefix/src/boost_unordered-populate-stamp/boost_unordered-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"boost_unordered-populate"
+		],
+		"name" : "boost_unordered-populate"
+	}
+}
