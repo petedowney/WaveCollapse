@@ -29,7 +29,8 @@ CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 
-//No help, variable specified on the command line.
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
@@ -96,7 +97,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 CMAKE_INSTALL_NAME_TOOL:FILEPATH=/usr/bin/install_name_tool
 
 //No help, variable specified on the command line.
-CMAKE_INSTALL_PREFIX:PATH=/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-install
+CMAKE_INSTALL_PREFIX:PATH=/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-install/src
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
@@ -125,7 +126,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //No help, variable specified on the command line.
-CMAKE_MODULE_PATH:PATH=/private/var/folders/h8/pnzhwplx7lb86fpd7pc_71_c0000gn/T/pip-build-env-0s42buu_/overlay/lib/python3.12/site-packages/skbuild/resources/cmake
+CMAKE_MODULE_PATH:PATH=/private/var/folders/h8/pnzhwplx7lb86fpd7pc_71_c0000gn/T/pip-build-env-5rnn2d5n/overlay/lib/python3.12/site-packages/skbuild/resources/cmake
 
 //Path to a program.
 CMAKE_NM:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/nm
@@ -325,6 +326,9 @@ boost_unordered_SOURCE_DIR:STATIC=/Users/petedowney/Documents/GitHub/WaveCollaps
 //Path to a library.
 pkgcfg_lib_PC_RAYLIB_raylib:FILEPATH=/usr/local/Cellar/raylib/4.0.0/lib/libraylib.dylib
 
+//The directory containing a CMake configuration file for pybind11.
+pybind11_DIR:PATH=/usr/local/share/cmake/pybind11
+
 //The directory containing a CMake configuration file for raylib.
 raylib_DIR:PATH=/usr/local/lib/cmake/raylib
 
@@ -445,7 +449,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -488,10 +492,16 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/local/Caskroom/miniconda/base/envs/WC/bin/python][/usr/local/Caskroom/miniconda/base/envs/WC/include/python3.12][/usr/local/Caskroom/miniconda/base/envs/WC/lib/libpython3.12.dylib][cfound components: Interpreter Development Development.Module Development.Embed ][v3.12.2()]
 //Details about finding PythonLibs
 FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/local/Caskroom/miniconda/base/envs/WC/lib/libpython3.12.dylib][/usr/local/Caskroom/miniconda/base/envs/WC/include/python3.12][v3.12.2()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+//Test HAS_FLTO
+HAS_FLTO:INTERNAL=1
+//Test HAS_FLTO_THIN
+HAS_FLTO_THIN:INTERNAL=
 PC_RAYLIB_CFLAGS:INTERNAL=-I/usr/local/Cellar/raylib/4.0.0/include
 PC_RAYLIB_CFLAGS_I:INTERNAL=
 PC_RAYLIB_CFLAGS_OTHER:INTERNAL=
@@ -529,19 +539,37 @@ PC_RAYLIB_raylib_PREFIX:INTERNAL=
 PC_RAYLIB_raylib_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//Python executable during the last CMake run
+PYBIND11_PYTHON_EXECUTABLE_LAST:INTERNAL=/usr/local/Caskroom/miniconda/base/envs/WC/bin/python
 //ADVANCED property for variable: PYTHON_INCLUDE_DIR
 PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//Python debug status
+PYTHON_IS_DEBUG:INTERNAL=0
 //ADVANCED property for variable: PYTHON_LIBRARY
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
 PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
+PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-312-darwin.so
 //No help, variable specified on the command line.
 SKBUILD:INTERNAL=TRUE
+_Python:INTERNAL=Python
+_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=c9989899363c511eee903764210817df
+_Python_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=284292684b7d1f8f24248972bfa37016
+_Python_EXECUTABLE:INTERNAL=/usr/local/Caskroom/miniconda/base/envs/WC/bin/python
+_Python_INCLUDE_DIR:INTERNAL=/usr/local/Caskroom/miniconda/base/envs/WC/include/python3.12
+//Python Properties
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;2;64;;cpython-312-darwin;/usr/local/Caskroom/miniconda/base/envs/WC/lib/python3.12;/usr/local/Caskroom/miniconda/base/envs/WC/lib/python3.12;/usr/local/Caskroom/miniconda/base/envs/WC/lib/python3.12/site-packages;/usr/local/Caskroom/miniconda/base/envs/WC/lib/python3.12/site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=3d2da565def300d38afb1b72e80daa15
+//Path to a library.
+_Python_LIBRARY_RELEASE:INTERNAL=/usr/local/Caskroom/miniconda/base/envs/WC/lib/libpython3.12.dylib
 __pkg_config_arguments_PC_RAYLIB:INTERNAL=QUIET;raylib
 __pkg_config_checked_PC_RAYLIB:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_RAYLIB_raylib
 pkgcfg_lib_PC_RAYLIB_raylib-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/local/Cellar/raylib/4.0.0/lib
+//Directories where pybind11 and possibly Python headers are located
+pybind11_INCLUDE_DIRS:INTERNAL=/usr/local/include;/usr/local/Caskroom/miniconda/base/envs/WC/include/python3.12
 //ADVANCED property for variable: raylib_INCLUDE_DIR
 raylib_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: raylib_LIBRARY

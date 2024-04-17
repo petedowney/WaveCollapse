@@ -64,19 +64,18 @@ CMAKE_BINARY_DIR = /Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/maco
 
 # The main recursive "all" target.
 all: CMakeFiles/WaveCollapse.dir/all
+all: CMakeFiles/WaveCollapseInterface.dir/all
 all: _deps/boost_unordered-build/all
-all: _deps/raylib_cpp-build/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: _deps/boost_unordered-build/preinstall
-preinstall: _deps/raylib_cpp-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/WaveCollapse.dir/clean
+clean: CMakeFiles/WaveCollapseInterface.dir/clean
 clean: _deps/boost_unordered-build/clean
-clean: _deps/raylib_cpp-build/clean
 .PHONY : clean
 
 #=============================================================================
@@ -95,48 +94,18 @@ _deps/boost_unordered-build/clean:
 .PHONY : _deps/boost_unordered-build/clean
 
 #=============================================================================
-# Directory level rules for directory _deps/raylib_cpp-build
-
-# Recursive "all" directory target.
-_deps/raylib_cpp-build/all: _deps/raylib_cpp-build/include/all
-.PHONY : _deps/raylib_cpp-build/all
-
-# Recursive "preinstall" directory target.
-_deps/raylib_cpp-build/preinstall: _deps/raylib_cpp-build/include/preinstall
-.PHONY : _deps/raylib_cpp-build/preinstall
-
-# Recursive "clean" directory target.
-_deps/raylib_cpp-build/clean: _deps/raylib_cpp-build/include/clean
-.PHONY : _deps/raylib_cpp-build/clean
-
-#=============================================================================
-# Directory level rules for directory _deps/raylib_cpp-build/include
-
-# Recursive "all" directory target.
-_deps/raylib_cpp-build/include/all:
-.PHONY : _deps/raylib_cpp-build/include/all
-
-# Recursive "preinstall" directory target.
-_deps/raylib_cpp-build/include/preinstall:
-.PHONY : _deps/raylib_cpp-build/include/preinstall
-
-# Recursive "clean" directory target.
-_deps/raylib_cpp-build/include/clean:
-.PHONY : _deps/raylib_cpp-build/include/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/WaveCollapse.dir
 
 # All Build rule for target.
 CMakeFiles/WaveCollapse.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/CMakeFiles --progress-num=1,2,3,4,5 "Built target WaveCollapse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/CMakeFiles --progress-num=1,2,3,4 "Built target WaveCollapse"
 .PHONY : CMakeFiles/WaveCollapse.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/WaveCollapse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/WaveCollapse.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/CMakeFiles 0
 .PHONY : CMakeFiles/WaveCollapse.dir/rule
@@ -149,6 +118,32 @@ WaveCollapse: CMakeFiles/WaveCollapse.dir/rule
 CMakeFiles/WaveCollapse.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/clean
 .PHONY : CMakeFiles/WaveCollapse.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/WaveCollapseInterface.dir
+
+# All Build rule for target.
+CMakeFiles/WaveCollapseInterface.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/CMakeFiles --progress-num=5,6 "Built target WaveCollapseInterface"
+.PHONY : CMakeFiles/WaveCollapseInterface.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/WaveCollapseInterface.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/WaveCollapseInterface.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/CMakeFiles 0
+.PHONY : CMakeFiles/WaveCollapseInterface.dir/rule
+
+# Convenience name for target.
+WaveCollapseInterface: CMakeFiles/WaveCollapseInterface.dir/rule
+.PHONY : WaveCollapseInterface
+
+# clean rule for target.
+CMakeFiles/WaveCollapseInterface.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/clean
+.PHONY : CMakeFiles/WaveCollapseInterface.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

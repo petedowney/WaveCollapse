@@ -17,7 +17,7 @@ set(error_code 1)
 set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
-    COMMAND "/usr/bin/git"  clone --no-checkout --depth 1 --no-single-branch "https://github.com/MikePopoloski/boost_unordered" "boost_unordered-src"
+    COMMAND "/usr/local/bin/git"  clone --no-checkout --depth 1 --no-single-branch "https://github.com/MikePopoloski/boost_unordered" "boost_unordered-src"
     WORKING_DIRECTORY "/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps"
     RESULT_VARIABLE error_code
     )
@@ -32,7 +32,7 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "/usr/bin/git"  checkout v1.0 --
+  COMMAND "/usr/local/bin/git"  checkout v1.0 --
   WORKING_DIRECTORY "/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-src"
   RESULT_VARIABLE error_code
   )
@@ -43,7 +43,7 @@ endif()
 set(init_submodules TRUE)
 if(init_submodules)
   execute_process(
-    COMMAND "/usr/bin/git"  submodule update --recursive --init 
+    COMMAND "/usr/local/bin/git"  submodule update --recursive --init 
     WORKING_DIRECTORY "/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-src"
     RESULT_VARIABLE error_code
     )

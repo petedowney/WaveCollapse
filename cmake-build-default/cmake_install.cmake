@@ -34,17 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-build/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/raylib_cpp-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

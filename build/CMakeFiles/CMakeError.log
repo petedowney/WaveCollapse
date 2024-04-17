@@ -1,0 +1,16 @@
+Performing C++ SOURCE FILE Test HAS_FLTO_THIN failed with the following output:
+Change Dir: /Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_89dee/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_89dee.dir/build.make CMakeFiles/cmTC_89dee.dir/build
+Building CXX object CMakeFiles/cmTC_89dee.dir/src.cxx.o
+/usr/bin/clang++ -DHAS_FLTO_THIN  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk   -flto -std=gnu++2a -MD -MT CMakeFiles/cmTC_89dee.dir/src.cxx.o -MF CMakeFiles/cmTC_89dee.dir/src.cxx.o.d -o CMakeFiles/cmTC_89dee.dir/src.cxx.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_89dee
+/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89dee.dir/link.txt --verbose=1
+/usr/bin/clang++  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_89dee.dir/src.cxx.o -o cmTC_89dee  -flto= 
+clang: error: unsupported argument '' to option 'flto='
+make[1]: *** [cmTC_89dee] Error 1
+make: *** [cmTC_89dee/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }

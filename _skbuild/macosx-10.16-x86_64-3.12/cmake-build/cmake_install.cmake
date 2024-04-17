@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-install")
+  set(CMAKE_INSTALL_PREFIX "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-install/src")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -42,9 +42,22 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/_deps/boost_unordered-build/cmake_install.cmake")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/_deps/raylib_cpp-build/cmake_install.cmake")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/Users/petedowney/Documents/GitHub/WaveCollapse/lib/WaveCollapseInterface.cpython-312-darwin.so")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  file(INSTALL DESTINATION "/Users/petedowney/Documents/GitHub/WaveCollapse/lib" TYPE MODULE FILES "/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-build/WaveCollapseInterface.cpython-312-darwin.so")
+  if(EXISTS "$ENV{DESTDIR}/Users/petedowney/Documents/GitHub/WaveCollapse/lib/WaveCollapseInterface.cpython-312-darwin.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/petedowney/Documents/GitHub/WaveCollapse/lib/WaveCollapseInterface.cpython-312-darwin.so")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -x "$ENV{DESTDIR}/Users/petedowney/Documents/GitHub/WaveCollapse/lib/WaveCollapseInterface.cpython-312-darwin.so")
+    endif()
+  endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

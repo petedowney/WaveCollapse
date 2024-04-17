@@ -1,22 +1,22 @@
 [
 {
   "directory": "/Users/petedowney/Documents/GitHub/WaveCollapse/build",
-  "command": "/usr/bin/clang++  -I/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered -I/usr/local/Frameworks/Python.framework/Versions/3.9/include/python3.9 -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/raylib_cpp-src/include -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src/include -isystem /usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -I/usr/local/Cellar/raylib/4.0.0/include -std=gnu++2a -o CMakeFiles/WaveCollapse.dir/WaveCollapse/main.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/main.cpp",
-  "file": "/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/main.cpp"
+  "command": "/usr/bin/clang++  -I/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src/include -isystem /usr/local/include -isystem /usr/local/Caskroom/miniconda/base/include/python3.11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -std=gnu++2a -o CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp",
+  "file": "/Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp"
 },
 {
   "directory": "/Users/petedowney/Documents/GitHub/WaveCollapse/build",
-  "command": "/usr/bin/clang++  -I/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered -I/usr/local/Frameworks/Python.framework/Versions/3.9/include/python3.9 -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/raylib_cpp-src/include -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src/include -isystem /usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -I/usr/local/Cellar/raylib/4.0.0/include -std=gnu++2a -o CMakeFiles/WaveCollapse.dir/WaveCollapse/Chunk.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/Chunk.cpp",
-  "file": "/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/Chunk.cpp"
+  "command": "/usr/bin/clang++  -I/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src/include -isystem /usr/local/include -isystem /usr/local/Caskroom/miniconda/base/include/python3.11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -std=gnu++2a -o CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp",
+  "file": "/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp"
 },
 {
   "directory": "/Users/petedowney/Documents/GitHub/WaveCollapse/build",
-  "command": "/usr/bin/clang++  -I/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered -I/usr/local/Frameworks/Python.framework/Versions/3.9/include/python3.9 -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/raylib_cpp-src/include -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src/include -isystem /usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -I/usr/local/Cellar/raylib/4.0.0/include -std=gnu++2a -o CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapse.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapse.cpp",
-  "file": "/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapse.cpp"
+  "command": "/usr/bin/clang++  -I/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src/include -isystem /usr/local/include -isystem /usr/local/Caskroom/miniconda/base/include/python3.11 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -std=gnu++2a -o CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp",
+  "file": "/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp"
 },
 {
   "directory": "/Users/petedowney/Documents/GitHub/WaveCollapse/build",
-  "command": "/usr/bin/clang++  -I/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered -I/usr/local/Frameworks/Python.framework/Versions/3.9/include/python3.9 -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/raylib_cpp-src/include -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src/include -isystem /usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -I/usr/local/Cellar/raylib/4.0.0/include -std=gnu++2a -o CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapseInterface.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapseInterface.cpp",
-  "file": "/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapseInterface.cpp"
+  "command": "/usr/bin/clang++ -DWaveCollapseInterface_EXPORTS -I/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered -I/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src/include -isystem /usr/local/Caskroom/miniconda/base/include/python3.11 -isystem /usr/local/include -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fPIC -fvisibility=hidden -std=gnu++2a -o CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp",
+  "file": "/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp"
 }
 ]

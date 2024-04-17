@@ -65,18 +65,6 @@ CMAKE_BINARY_DIR = /Users/petedowney/Documents/GitHub/WaveCollapse/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -96,39 +84,6 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -162,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named WaveCollapseInterface
+
+# Build rule for target.
+WaveCollapseInterface: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 WaveCollapseInterface
+.PHONY : WaveCollapseInterface
+
+# fast build rule for target.
+WaveCollapseInterface/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/build
+.PHONY : WaveCollapseInterface/fast
+
+#=============================================================================
 # Target rules for targets named WaveCollapse
 
 # Build rule for target.
@@ -174,101 +142,80 @@ WaveCollapse/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/build
 .PHONY : WaveCollapse/fast
 
-WaveCollapse/Chunk.o: WaveCollapse/Chunk.cpp.o
-.PHONY : WaveCollapse/Chunk.o
+src/Chunk.o: src/Chunk.cpp.o
+.PHONY : src/Chunk.o
 
 # target to build an object file
-WaveCollapse/Chunk.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/Chunk.cpp.o
-.PHONY : WaveCollapse/Chunk.cpp.o
+src/Chunk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o
+.PHONY : src/Chunk.cpp.o
 
-WaveCollapse/Chunk.i: WaveCollapse/Chunk.cpp.i
-.PHONY : WaveCollapse/Chunk.i
+src/Chunk.i: src/Chunk.cpp.i
+.PHONY : src/Chunk.i
 
 # target to preprocess a source file
-WaveCollapse/Chunk.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/Chunk.cpp.i
-.PHONY : WaveCollapse/Chunk.cpp.i
+src/Chunk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.i
+.PHONY : src/Chunk.cpp.i
 
-WaveCollapse/Chunk.s: WaveCollapse/Chunk.cpp.s
-.PHONY : WaveCollapse/Chunk.s
+src/Chunk.s: src/Chunk.cpp.s
+.PHONY : src/Chunk.s
 
 # target to generate assembly for a file
-WaveCollapse/Chunk.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/Chunk.cpp.s
-.PHONY : WaveCollapse/Chunk.cpp.s
+src/Chunk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.s
+.PHONY : src/Chunk.cpp.s
 
-WaveCollapse/WaveCollapse.o: WaveCollapse/WaveCollapse.cpp.o
-.PHONY : WaveCollapse/WaveCollapse.o
+src/WaveCollapse.o: src/WaveCollapse.cpp.o
+.PHONY : src/WaveCollapse.o
 
 # target to build an object file
-WaveCollapse/WaveCollapse.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapse.cpp.o
-.PHONY : WaveCollapse/WaveCollapse.cpp.o
+src/WaveCollapse.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o
+.PHONY : src/WaveCollapse.cpp.o
 
-WaveCollapse/WaveCollapse.i: WaveCollapse/WaveCollapse.cpp.i
-.PHONY : WaveCollapse/WaveCollapse.i
+src/WaveCollapse.i: src/WaveCollapse.cpp.i
+.PHONY : src/WaveCollapse.i
 
 # target to preprocess a source file
-WaveCollapse/WaveCollapse.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapse.cpp.i
-.PHONY : WaveCollapse/WaveCollapse.cpp.i
+src/WaveCollapse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.i
+.PHONY : src/WaveCollapse.cpp.i
 
-WaveCollapse/WaveCollapse.s: WaveCollapse/WaveCollapse.cpp.s
-.PHONY : WaveCollapse/WaveCollapse.s
+src/WaveCollapse.s: src/WaveCollapse.cpp.s
+.PHONY : src/WaveCollapse.s
 
 # target to generate assembly for a file
-WaveCollapse/WaveCollapse.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapse.cpp.s
-.PHONY : WaveCollapse/WaveCollapse.cpp.s
+src/WaveCollapse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.s
+.PHONY : src/WaveCollapse.cpp.s
 
-WaveCollapse/WaveCollapseInterface.o: WaveCollapse/WaveCollapseInterface.cpp.o
-.PHONY : WaveCollapse/WaveCollapseInterface.o
+src/WaveCollapseInterface.o: src/WaveCollapseInterface.cpp.o
+.PHONY : src/WaveCollapseInterface.o
 
 # target to build an object file
-WaveCollapse/WaveCollapseInterface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapseInterface.cpp.o
-.PHONY : WaveCollapse/WaveCollapseInterface.cpp.o
+src/WaveCollapseInterface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o
+.PHONY : src/WaveCollapseInterface.cpp.o
 
-WaveCollapse/WaveCollapseInterface.i: WaveCollapse/WaveCollapseInterface.cpp.i
-.PHONY : WaveCollapse/WaveCollapseInterface.i
-
-# target to preprocess a source file
-WaveCollapse/WaveCollapseInterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapseInterface.cpp.i
-.PHONY : WaveCollapse/WaveCollapseInterface.cpp.i
-
-WaveCollapse/WaveCollapseInterface.s: WaveCollapse/WaveCollapseInterface.cpp.s
-.PHONY : WaveCollapse/WaveCollapseInterface.s
-
-# target to generate assembly for a file
-WaveCollapse/WaveCollapseInterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapseInterface.cpp.s
-.PHONY : WaveCollapse/WaveCollapseInterface.cpp.s
-
-WaveCollapse/main.o: WaveCollapse/main.cpp.o
-.PHONY : WaveCollapse/main.o
-
-# target to build an object file
-WaveCollapse/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/main.cpp.o
-.PHONY : WaveCollapse/main.cpp.o
-
-WaveCollapse/main.i: WaveCollapse/main.cpp.i
-.PHONY : WaveCollapse/main.i
+src/WaveCollapseInterface.i: src/WaveCollapseInterface.cpp.i
+.PHONY : src/WaveCollapseInterface.i
 
 # target to preprocess a source file
-WaveCollapse/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/main.cpp.i
-.PHONY : WaveCollapse/main.cpp.i
+src/WaveCollapseInterface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.i
+.PHONY : src/WaveCollapseInterface.cpp.i
 
-WaveCollapse/main.s: WaveCollapse/main.cpp.s
-.PHONY : WaveCollapse/main.s
+src/WaveCollapseInterface.s: src/WaveCollapseInterface.cpp.s
+.PHONY : src/WaveCollapseInterface.s
 
 # target to generate assembly for a file
-WaveCollapse/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/WaveCollapse/main.cpp.s
-.PHONY : WaveCollapse/main.cpp.s
+src/WaveCollapseInterface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.s
+.PHONY : src/WaveCollapseInterface.cpp.s
 
 # Help Target
 help:
@@ -277,24 +224,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... WaveCollapse"
-	@echo "... WaveCollapse/Chunk.o"
-	@echo "... WaveCollapse/Chunk.i"
-	@echo "... WaveCollapse/Chunk.s"
-	@echo "... WaveCollapse/WaveCollapse.o"
-	@echo "... WaveCollapse/WaveCollapse.i"
-	@echo "... WaveCollapse/WaveCollapse.s"
-	@echo "... WaveCollapse/WaveCollapseInterface.o"
-	@echo "... WaveCollapse/WaveCollapseInterface.i"
-	@echo "... WaveCollapse/WaveCollapseInterface.s"
-	@echo "... WaveCollapse/main.o"
-	@echo "... WaveCollapse/main.i"
-	@echo "... WaveCollapse/main.s"
+	@echo "... WaveCollapseInterface"
+	@echo "... src/Chunk.o"
+	@echo "... src/Chunk.i"
+	@echo "... src/Chunk.s"
+	@echo "... src/WaveCollapse.o"
+	@echo "... src/WaveCollapse.i"
+	@echo "... src/WaveCollapse.s"
+	@echo "... src/WaveCollapseInterface.o"
+	@echo "... src/WaveCollapseInterface.i"
+	@echo "... src/WaveCollapseInterface.s"
 .PHONY : help
 
 

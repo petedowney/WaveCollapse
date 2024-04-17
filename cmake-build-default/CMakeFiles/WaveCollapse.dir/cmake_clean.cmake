@@ -1,10 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/WaveCollapse.dir/WaveCollapse/Chunk.cpp.o"
-  "CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapse.cpp.o"
-  "CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapseInterface.cpp.o"
-  "CMakeFiles/WaveCollapse.dir/WaveCollapse/main.cpp.o"
-  "WaveCollapse"
-  "WaveCollapse.pdb"
+  "CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o"
+  "CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o"
+  "CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o"
+  "libWaveCollapse.a"
+  "libWaveCollapse.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

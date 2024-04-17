@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Examples
-BUILD_RAYLIB_CPP_EXAMPLES:BOOL=OFF
-
 //Include tests in the build
 BUS_INCLUDE_TESTS:BOOL=OFF
 
@@ -244,36 +241,14 @@ FETCHCONTENT_QUIET:BOOL=ON
 // for boost_unordered
 FETCHCONTENT_SOURCE_DIR_BOOST_UNORDERED:PATH=
 
-//When not empty, overrides where to find pre-populated content
-// for raylib_cpp
-FETCHCONTENT_SOURCE_DIR_RAYLIB_CPP:PATH=
-
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of boost_unordered
 FETCHCONTENT_UPDATES_DISCONNECTED_BOOST_UNORDERED:BOOL=OFF
 
-//Enables UPDATE_DISCONNECTED behavior just for population of raylib_cpp
-FETCHCONTENT_UPDATES_DISCONNECTED_RAYLIB_CPP:BOOL=OFF
-
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/local/bin/git
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
-
-//Path to a file.
-PYTHON_INCLUDE_DIR:PATH=/usr/local/Frameworks/Python.framework/Versions/3.9/include/python3.9
-
-//Path to a library.
-PYTHON_LIBRARY:FILEPATH=/usr/local/Frameworks/Python.framework/Versions/3.9/lib/libpython3.9.dylib
-
-//Path to a library.
-PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
-
-//The directory containing a CMake configuration file for Python3Libs.
-Python3Libs_DIR:PATH=Python3Libs_DIR-NOTFOUND
 
 //Value Computed by CMake
 WaveCollapse_BINARY_DIR:STATIC=/Users/petedowney/Documents/GitHub/WaveCollapse/build
@@ -293,29 +268,8 @@ boost_unordered_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 boost_unordered_SOURCE_DIR:STATIC=/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-src
 
-//Path to a library.
-pkgcfg_lib_PC_RAYLIB_raylib:FILEPATH=/usr/local/Cellar/raylib/4.0.0/lib/libraylib.dylib
-
-//The directory containing a CMake configuration file for raylib.
-raylib_DIR:PATH=/usr/local/lib/cmake/raylib
-
-//Path to a file.
-raylib_INCLUDE_DIR:PATH=/usr/local/Cellar/raylib/4.0.0/include
-
-//Path to a library.
-raylib_LIBRARY:FILEPATH=/usr/local/Cellar/raylib/4.0.0/lib/libraylib.dylib
-
-//Value Computed by CMake
-raylib_cpp_BINARY_DIR:STATIC=/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/raylib_cpp-build
-
-//The directory containing a CMake configuration file for raylib_cpp.
-raylib_cpp_DIR:PATH=raylib_cpp_DIR-NOTFOUND
-
-//Value Computed by CMake
-raylib_cpp_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-raylib_cpp_SOURCE_DIR:STATIC=/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/raylib_cpp-src
+//The directory containing a CMake configuration file for pybind11.
+pybind11_DIR:PATH=/usr/local/share/cmake/pybind11
 
 
 ########################
@@ -414,7 +368,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -457,60 +411,32 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/local/Frameworks/Python.framework/Versions/3.9/lib/libpython3.9.dylib][/usr/local/Frameworks/Python.framework/Versions/3.9/include/python3.9][v3.9.18()]
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/local/Caskroom/miniconda/base/bin/python3.1][/usr/local/Caskroom/miniconda/base/include/python3.11][/usr/local/Caskroom/miniconda/base/lib/libpython3.11.dylib][cfound components: Interpreter Development Development.Module Development.Embed ][v3.11.4()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
-PC_RAYLIB_CFLAGS:INTERNAL=-I/usr/local/Cellar/raylib/4.0.0/include
-PC_RAYLIB_CFLAGS_I:INTERNAL=
-PC_RAYLIB_CFLAGS_OTHER:INTERNAL=
-PC_RAYLIB_FOUND:INTERNAL=1
-PC_RAYLIB_INCLUDEDIR:INTERNAL=/usr/local/Cellar/raylib/4.0.0/include
-PC_RAYLIB_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/raylib/4.0.0/include
-PC_RAYLIB_LDFLAGS:INTERNAL=-L/usr/local/Cellar/raylib/4.0.0/lib;-lraylib
-PC_RAYLIB_LDFLAGS_OTHER:INTERNAL=
-PC_RAYLIB_LIBDIR:INTERNAL=/usr/local/Cellar/raylib/4.0.0/lib
-PC_RAYLIB_LIBRARIES:INTERNAL=raylib
-PC_RAYLIB_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/raylib/4.0.0/lib
-PC_RAYLIB_LIBS:INTERNAL=
-PC_RAYLIB_LIBS_L:INTERNAL=
-PC_RAYLIB_LIBS_OTHER:INTERNAL=
-PC_RAYLIB_LIBS_PATHS:INTERNAL=
-PC_RAYLIB_MODULE_NAME:INTERNAL=raylib
-PC_RAYLIB_PREFIX:INTERNAL=/usr/local/Cellar/raylib/4.0.0
-PC_RAYLIB_STATIC_CFLAGS:INTERNAL=-I/usr/local/Cellar/raylib/4.0.0/include
-PC_RAYLIB_STATIC_CFLAGS_I:INTERNAL=
-PC_RAYLIB_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_RAYLIB_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/Cellar/raylib/4.0.0/include
-PC_RAYLIB_STATIC_LDFLAGS:INTERNAL=-L/usr/local/Cellar/raylib/4.0.0/lib;-lraylib
-PC_RAYLIB_STATIC_LDFLAGS_OTHER:INTERNAL=
-PC_RAYLIB_STATIC_LIBDIR:INTERNAL=
-PC_RAYLIB_STATIC_LIBRARIES:INTERNAL=raylib
-PC_RAYLIB_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/Cellar/raylib/4.0.0/lib
-PC_RAYLIB_STATIC_LIBS:INTERNAL=
-PC_RAYLIB_STATIC_LIBS_L:INTERNAL=
-PC_RAYLIB_STATIC_LIBS_OTHER:INTERNAL=
-PC_RAYLIB_STATIC_LIBS_PATHS:INTERNAL=
-PC_RAYLIB_VERSION:INTERNAL=4.0.0
-PC_RAYLIB_raylib_INCLUDEDIR:INTERNAL=
-PC_RAYLIB_raylib_LIBDIR:INTERNAL=
-PC_RAYLIB_raylib_PREFIX:INTERNAL=
-PC_RAYLIB_raylib_VERSION:INTERNAL=
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_INCLUDE_DIR
-PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_LIBRARY
-PYTHON_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
-PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-__pkg_config_arguments_PC_RAYLIB:INTERNAL=QUIET;raylib
-__pkg_config_checked_PC_RAYLIB:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_RAYLIB_raylib
-pkgcfg_lib_PC_RAYLIB_raylib-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/usr/local/Cellar/raylib/4.0.0/lib
-//ADVANCED property for variable: raylib_INCLUDE_DIR
-raylib_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: raylib_LIBRARY
-raylib_LIBRARY-ADVANCED:INTERNAL=1
+//Test HAS_FLTO
+HAS_FLTO:INTERNAL=1
+//Test HAS_FLTO_THIN
+HAS_FLTO_THIN:INTERNAL=
+//Python executable during the last CMake run
+PYBIND11_PYTHON_EXECUTABLE_LAST:INTERNAL=/usr/local/Caskroom/miniconda/base/bin/python3.1
+//Python debug status
+PYTHON_IS_DEBUG:INTERNAL=0
+PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
+PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-311-darwin.so
+_Python:INTERNAL=Python
+_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=72f9547da9450eb7d44e80c5a8e81b8b
+_Python_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=41c084c4a5ea8c12247d44ac01ed1cbb
+//Path to a program.
+_Python_EXECUTABLE:INTERNAL=/usr/local/Caskroom/miniconda/base/bin/python3.1
+//Path to a file.
+_Python_INCLUDE_DIR:INTERNAL=/usr/local/Caskroom/miniconda/base/include/python3.11
+//Python Properties
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;4;64;;cpython-311-darwin;/usr/local/Caskroom/miniconda/base/lib/python3.11;/usr/local/Caskroom/miniconda/base/lib/python3.11;/usr/local/Caskroom/miniconda/base/lib/python3.11/site-packages;/usr/local/Caskroom/miniconda/base/lib/python3.11/site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=1b9bb356ea99c8018e5d14e1b34adc35
+//Path to a library.
+_Python_LIBRARY_RELEASE:INTERNAL=/usr/local/Caskroom/miniconda/base/lib/libpython3.11.dylib
+//Directories where pybind11 and possibly Python headers are located
+pybind11_INCLUDE_DIRS:INTERNAL=/usr/local/include;/usr/local/Caskroom/miniconda/base/include/python3.11
 

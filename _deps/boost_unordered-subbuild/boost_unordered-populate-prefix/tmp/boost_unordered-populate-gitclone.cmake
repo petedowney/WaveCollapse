@@ -17,7 +17,7 @@ set(error_code 1)
 set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
-    COMMAND "/usr/local/bin/git"  clone --no-checkout --depth 1 --no-single-branch "https://github.com/MikePopoloski/boost_unordered" "boost_unordered-src"
+    COMMAND "/usr/local/bin/git"  clone --no-checkout --depth 1 --no-single-branch --config "advice.detachedHead=false" "https://github.com/MikePopoloski/boost_unordered" "boost_unordered-src"
     WORKING_DIRECTORY "/Users/petedowney/Documents/GitHub/WaveCollapse/_deps"
     RESULT_VARIABLE error_code
     )

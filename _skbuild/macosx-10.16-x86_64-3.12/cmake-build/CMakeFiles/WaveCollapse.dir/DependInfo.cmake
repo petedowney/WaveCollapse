@@ -8,10 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/Chunk.cpp" "CMakeFiles/WaveCollapse.dir/WaveCollapse/Chunk.cpp.o" "gcc" "CMakeFiles/WaveCollapse.dir/WaveCollapse/Chunk.cpp.o.d"
-  "/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapse.cpp" "CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapse.cpp.o" "gcc" "CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapse.cpp.o.d"
-  "/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapseInterface.cpp" "CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapseInterface.cpp.o" "gcc" "CMakeFiles/WaveCollapse.dir/WaveCollapse/WaveCollapseInterface.cpp.o.d"
-  "/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/main.cpp" "CMakeFiles/WaveCollapse.dir/WaveCollapse/main.cpp.o" "gcc" "CMakeFiles/WaveCollapse.dir/WaveCollapse/main.cpp.o.d"
+  "/Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp" "CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o" "gcc" "CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o.d"
+  "/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp" "CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o" "gcc" "CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o.d"
+  "/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp" "CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o" "gcc" "CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o.d"
   )
 
 # Targets to which this target links.

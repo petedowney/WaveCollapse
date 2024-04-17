@@ -1,4 +1,5 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -G "CodeBlocks - Unix Makefiles" /Users/petedowney/Documents/GitHub/WaveCollapse
+-- Found pybind11: /usr/local/include (found version "2.12.0")
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default

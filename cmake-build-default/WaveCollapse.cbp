@@ -5,23 +5,13 @@
 		<Option title="WaveCollapse"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\raylib\;CMake Files\cmake-build-default\;CMake Files\cmake-build-default\_deps\;CMake Files\cmake-build-default\_deps\boost_unordered-src\;CMake Files\cmake-build-default\_deps\raylib_cpp-src\;CMake Files\cmake-build-default\_deps\raylib_cpp-src\include\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\cmake\;CMake Files\..\..\..\..\..\usr\local\share\cmake\pybind11\;CMake Files\cmake-build-default\;CMake Files\cmake-build-default\_deps\;CMake Files\cmake-build-default\_deps\boost_unordered-src\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/local">
-				<Option working_dir="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 install/local"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
@@ -47,52 +37,68 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install/strip">
+			<Target title="WaveCollapseInterface">
+				<Option output="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/WaveCollapseInterface.cpython-311-darwin.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered"/>
+					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-src/include"/>
+					<Add directory="/usr/local/Caskroom/miniconda/base/include/python3.11"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 WaveCollapseInterface"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install">
+			<Target title="WaveCollapseInterface/fast">
+				<Option output="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/WaveCollapseInterface.cpython-311-darwin.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered"/>
+					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-src/include"/>
+					<Add directory="/usr/local/Caskroom/miniconda/base/include/python3.11"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 WaveCollapseInterface/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="WaveCollapse">
-				<Option output="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/WaveCollapse" prefix_auto="0" extension_auto="0"/>
+				<Option output="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/libWaveCollapse.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered"/>
-					<Add directory="/usr/local/Frameworks/Python.framework/Versions/3.9/include/python3.9"/>
-					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/raylib_cpp-src/include"/>
 					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-src/include"/>
-					<Add directory="/usr/local/Cellar/raylib/4.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Caskroom/miniconda/base/include/python3.11"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -104,21 +110,19 @@
 				</MakeCommands>
 			</Target>
 			<Target title="WaveCollapse/fast">
-				<Option output="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/WaveCollapse" prefix_auto="0" extension_auto="0"/>
+				<Option output="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/libWaveCollapse.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/boost_unordered"/>
-					<Add directory="/usr/local/Frameworks/Python.framework/Versions/3.9/include/python3.9"/>
-					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/raylib_cpp-src/include"/>
 					<Add directory="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-src/include"/>
-					<Add directory="/usr/local/Cellar/raylib/4.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/local/Caskroom/miniconda/base/include/python3.11"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -130,44 +134,45 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/Chunk.cpp">
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp">
 			<Option target="WaveCollapse"/>
 		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/Chunk.h">
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.h">
 			<Option target="WaveCollapse"/>
 		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapse.cpp">
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp">
 			<Option target="WaveCollapse"/>
 		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapse.h">
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.h">
 			<Option target="WaveCollapse"/>
 		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapseInterface.cpp">
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp">
+			<Option target="WaveCollapseInterface"/>
 			<Option target="WaveCollapse"/>
 		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/WaveCollapseInterface.h">
-			<Option target="WaveCollapse"/>
-		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/WaveCollapse/main.cpp">
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.h">
 			<Option target="WaveCollapse"/>
 		</Unit>
 		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/lib/cmake/raylib/raylib-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\raylib\"/>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/share/cmake/pybind11/pybind11Common.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\cmake\pybind11\"/>
 		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/lib/cmake/raylib/raylib-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\raylib\"/>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/share/cmake/pybind11/pybind11Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/share/cmake/pybind11/pybind11ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/share/cmake/pybind11/pybind11NewTools.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\cmake\pybind11\"/>
+		</Unit>
+		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/../../../../../usr/local/share/cmake/pybind11/pybind11Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\cmake\pybind11\"/>
 		</Unit>
 		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/boost_unordered-src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\cmake-build-default\_deps\boost_unordered-src\"/>
-		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/raylib_cpp-src/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\cmake-build-default\_deps\raylib_cpp-src\"/>
-		</Unit>
-		<Unit filename="/Users/petedowney/Documents/GitHub/WaveCollapse/cmake-build-default/_deps/raylib_cpp-src/include/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\cmake-build-default\_deps\raylib_cpp-src\include\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
