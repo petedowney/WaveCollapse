@@ -26,13 +26,13 @@ find_package(pybind11 CONFIG REQUIRED)
 
 add_library(WaveCollapse STATIC
 src/Chunk.h src/Chunk.cpp src/WaveCollapse.cpp 
-src/WaveCollapse.h src/WaveCollapseInterface.cpp 
-src/WaveCollapseInterface.h)
+src/WaveCollapse.h src/WaveCollapseInt.cpp 
+src/WaveCollapseInt.h)
 
 target_link_libraries(WaveCollapse boost_unordered pybind11::module)
 
 
-pybind11_add_module(WaveCollapseInterface src/WaveCollapseInterface.cpp)
+pybind11_add_module(WaveCollapseInterface src/WaveCollapseInt.cpp)
 target_link_libraries(WaveCollapseInterface PRIVATE WaveCollapse)
 
 

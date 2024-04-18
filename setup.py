@@ -1,28 +1,3 @@
-
-'''
-import skbuild
-
-skbuild.setup(
-    name="WaveCollapse",
-    version="1.0.0",
-    description="A library implementing the Wave Collapse Algorithm written in C++",
-    author="Peter Downey",
-    license="MIT",
-    packages=["src"],
-    cmake_args=['-DCMAKE_BUILD_TYPE=Release'],
-    cmake_install_dir='src/',
-
-    # output the libwave_collapse.so file to the src directory
-    #ext_modules=[
-    #    skbuild.CMakeExtension('WaveCollapse', '.')
-    #]
-
-    #ext_modules=[
-    #    skbuild.CMakeExtension('WaveCollapseInterface', '.')
-    #]
- 
-)'''
-
 import os
 import re
 import subprocess
@@ -147,7 +122,6 @@ class CMakeBuild(build_ext):
             ["cmake", "--build", ".", *build_args], cwd=build_temp, check=True
         )
 
-
 # The information here can also be placed in setup.cfg - better separation of
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
@@ -162,5 +136,5 @@ setup(
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
     extras_require={"test": ["pytest>=6.0"]},
-    python_requires=">=3.7",
+    python_requires=">=3.9",
 )

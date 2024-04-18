@@ -974,7 +974,7 @@ CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o: ../src/WaveCollapse.cpp \
   /usr/local/Caskroom/miniconda/base/include/python3.11/cpython/pyfpe.h \
   /usr/local/Caskroom/miniconda/base/include/python3.11/tracemalloc.h
 
-CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o: ../src/WaveCollapseInterface.cpp \
+CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o: ../src/WaveCollapseInt.cpp \
   /usr/local/include/pybind11/pybind11.h \
   /usr/local/include/pybind11/detail/class.h \
   /usr/local/include/pybind11/attr.h \
@@ -1514,7 +1514,7 @@ CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o: ../src/WaveCollapse
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cerrno \
   /usr/local/include/pybind11/options.h \
   /usr/local/include/pybind11/typing.h \
-  ../src/WaveCollapseInterface.h \
+  ../src/WaveCollapseInt.h \
   /usr/local/include/pybind11/stl.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/list \
@@ -1584,7 +1584,7 @@ CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o: ../src/WaveCollapse
 
 /usr/local/include/pybind11/stl.h:
 
-../src/WaveCollapseInterface.h:
+../src/WaveCollapseInt.h:
 
 /usr/local/include/pybind11/gil_safe_call_once.h:
 
@@ -1603,8 +1603,6 @@ CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o: ../src/WaveCollapse
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/typeindex:
 
 /usr/local/Caskroom/miniconda/base/include/python3.11/cpython/frameobject.h:
-
-../src/WaveCollapseInterface.cpp:
 
 /usr/local/Caskroom/miniconda/base/include/python3.11/cpython/fileutils.h:
 
@@ -1977,6 +1975,8 @@ CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o: ../src/WaveCollapse
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/iter_swap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/is_sorted_until.h:
+
+../src/WaveCollapseInt.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__algorithm/is_sorted.h:
 

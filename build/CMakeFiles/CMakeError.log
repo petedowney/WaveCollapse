@@ -1,15 +1,37 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
 Performing C++ SOURCE FILE Test HAS_FLTO_THIN failed with the following output:
 Change Dir: /Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_89dee/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_89dee.dir/build.make CMakeFiles/cmTC_89dee.dir/build
-Building CXX object CMakeFiles/cmTC_89dee.dir/src.cxx.o
-/usr/bin/clang++ -DHAS_FLTO_THIN  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk   -flto -std=gnu++2a -MD -MT CMakeFiles/cmTC_89dee.dir/src.cxx.o -MF CMakeFiles/cmTC_89dee.dir/src.cxx.o.d -o CMakeFiles/cmTC_89dee.dir/src.cxx.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_89dee
-/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89dee.dir/link.txt --verbose=1
-/usr/bin/clang++  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_89dee.dir/src.cxx.o -o cmTC_89dee  -flto= 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_21cf7/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_21cf7.dir/build.make CMakeFiles/cmTC_21cf7.dir/build
+Building CXX object CMakeFiles/cmTC_21cf7.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAS_FLTO_THIN  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk   -flto -std=gnu++2a -MD -MT CMakeFiles/cmTC_21cf7.dir/src.cxx.o -MF CMakeFiles/cmTC_21cf7.dir/src.cxx.o.d -o CMakeFiles/cmTC_21cf7.dir/src.cxx.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_21cf7
+/usr/local/Cellar/cmake/3.21.3_1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21cf7.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_21cf7.dir/src.cxx.o -o cmTC_21cf7  -flto= 
 clang: error: unsupported argument '' to option 'flto='
-make[1]: *** [cmTC_89dee] Error 1
-make: *** [cmTC_89dee/fast] Error 2
+make[1]: *** [cmTC_21cf7] Error 1
+make: *** [cmTC_21cf7/fast] Error 2
 
 
 Source file was:

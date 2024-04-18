@@ -1,2 +1,2 @@
-/usr/bin/ar qc libWaveCollapse.a CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o
-/usr/bin/ranlib libWaveCollapse.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libWaveCollapse.a CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libWaveCollapse.a

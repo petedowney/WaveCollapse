@@ -3,8 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o.d"
   "CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o"
   "CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o.d"
-  "CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o"
-  "CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o.d"
+  "CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o"
+  "CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o.d"
   "libWaveCollapse.a"
   "libWaveCollapse.pdb"
 )

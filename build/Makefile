@@ -190,32 +190,32 @@ src/WaveCollapse.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.s
 .PHONY : src/WaveCollapse.cpp.s
 
-src/WaveCollapseInterface.o: src/WaveCollapseInterface.cpp.o
-.PHONY : src/WaveCollapseInterface.o
+src/WaveCollapseInt.o: src/WaveCollapseInt.cpp.o
+.PHONY : src/WaveCollapseInt.o
 
 # target to build an object file
-src/WaveCollapseInterface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o
-.PHONY : src/WaveCollapseInterface.cpp.o
+src/WaveCollapseInt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o
+.PHONY : src/WaveCollapseInt.cpp.o
 
-src/WaveCollapseInterface.i: src/WaveCollapseInterface.cpp.i
-.PHONY : src/WaveCollapseInterface.i
+src/WaveCollapseInt.i: src/WaveCollapseInt.cpp.i
+.PHONY : src/WaveCollapseInt.i
 
 # target to preprocess a source file
-src/WaveCollapseInterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.i
-.PHONY : src/WaveCollapseInterface.cpp.i
+src/WaveCollapseInt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.i
+.PHONY : src/WaveCollapseInt.cpp.i
 
-src/WaveCollapseInterface.s: src/WaveCollapseInterface.cpp.s
-.PHONY : src/WaveCollapseInterface.s
+src/WaveCollapseInt.s: src/WaveCollapseInt.cpp.s
+.PHONY : src/WaveCollapseInt.s
 
 # target to generate assembly for a file
-src/WaveCollapseInterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.s
-.PHONY : src/WaveCollapseInterface.cpp.s
+src/WaveCollapseInt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapseInterface.dir/build.make CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WaveCollapse.dir/build.make CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.s
+.PHONY : src/WaveCollapseInt.cpp.s
 
 # Help Target
 help:
@@ -233,9 +233,9 @@ help:
 	@echo "... src/WaveCollapse.o"
 	@echo "... src/WaveCollapse.i"
 	@echo "... src/WaveCollapse.s"
-	@echo "... src/WaveCollapseInterface.o"
-	@echo "... src/WaveCollapseInterface.i"
-	@echo "... src/WaveCollapseInterface.s"
+	@echo "... src/WaveCollapseInt.o"
+	@echo "... src/WaveCollapseInt.i"
+	@echo "... src/WaveCollapseInt.s"
 .PHONY : help
 
 

@@ -42,9 +42,6 @@ public:
     int getSize();
     std::tuple<int, int> getLocation();
 
-    void collapseTile(int collapseX, int collapseY, int state);
-    void collapseTile(std::shared_ptr<Tile> tile, int state);
-
 private:
     bool isChunkCollapsed = false;
     std::vector<std::vector<std::shared_ptr<Tile>>> state;
@@ -55,6 +52,9 @@ private:
     int partiallyCollapseTile(std::shared_ptr<Tile> tile, int collapseToZero);
 
     std::tuple<int, int, int> randomCollapse();
+
+    void collapseTile(int collapseX, int collapseY, int state);
+    void collapseTile(std::shared_ptr<Tile> tile, int state);
 };
 
 

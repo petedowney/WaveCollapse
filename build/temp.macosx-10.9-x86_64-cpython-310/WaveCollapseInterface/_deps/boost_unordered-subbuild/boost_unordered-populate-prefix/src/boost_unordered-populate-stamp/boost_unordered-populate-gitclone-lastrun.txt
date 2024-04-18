@@ -1,3 +1,0 @@
-repository='https://github.com/MikePopoloski/boost_unordered'
-module=''
-tag='origin'

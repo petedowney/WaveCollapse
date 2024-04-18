@@ -1,13 +1,13 @@
 Metadata-Version: 2.1
 Name: WaveCollapse
-Version: 1.0.0+1.gaefe292.dirty
+Version: 1.0.0+2.ga95f90c.dirty
 Summary: A Python package for the Wave Collapse Algorithm
 Author: Peter Downey
 Author-email: petedowney <peter.d.downey@gmail.com>
 License: MIT
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
-Requires-Python: >=3.7
+Requires-Python: >=3.9
 Description-Content-Type: text/markdown
 Provides-Extra: test
 Requires-Dist: pytest>=6.1.2; extra == "test"

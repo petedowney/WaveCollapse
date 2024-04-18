@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o"
-  "CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o.d"
+  "CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o"
+  "CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o.d"
   "WaveCollapseInterface.cpython-311-darwin.so"
   "WaveCollapseInterface.pdb"
 )

@@ -73,56 +73,56 @@ CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o: CMakeFiles/WaveCollapse.dir/flags.m
 CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o: ../src/Chunk.cpp
 CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o: CMakeFiles/WaveCollapse.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o -MF CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o.d -o CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o -MF CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o.d -o CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp
 
 CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp > CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp > CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.i
 
 CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp -o CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petedowney/Documents/GitHub/WaveCollapse/src/Chunk.cpp -o CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.s
 
 CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o: CMakeFiles/WaveCollapse.dir/flags.make
 CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o: ../src/WaveCollapse.cpp
 CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o: CMakeFiles/WaveCollapse.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o -MF CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o.d -o CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o -MF CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o.d -o CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp
 
 CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp > CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp > CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.i
 
 CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp -o CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapse.cpp -o CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.s
 
-CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o: CMakeFiles/WaveCollapse.dir/flags.make
-CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o: ../src/WaveCollapseInterface.cpp
-CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o: CMakeFiles/WaveCollapse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o -MF CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o.d -o CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp
+CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o: CMakeFiles/WaveCollapse.dir/flags.make
+CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o: ../src/WaveCollapseInt.cpp
+CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o: CMakeFiles/WaveCollapse.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o -MF CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o.d -o CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInt.cpp
 
-CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp > CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.i
+CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInt.cpp > CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.i
 
-CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp -o CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.s
+CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInt.cpp -o CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.s
 
 # Object files for target WaveCollapse
 WaveCollapse_OBJECTS = \
 "CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o" \
 "CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o" \
-"CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o"
+"CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o"
 
 # External object files for target WaveCollapse
 WaveCollapse_EXTERNAL_OBJECTS =
 
 libWaveCollapse.a: CMakeFiles/WaveCollapse.dir/src/Chunk.cpp.o
 libWaveCollapse.a: CMakeFiles/WaveCollapse.dir/src/WaveCollapse.cpp.o
-libWaveCollapse.a: CMakeFiles/WaveCollapse.dir/src/WaveCollapseInterface.cpp.o
+libWaveCollapse.a: CMakeFiles/WaveCollapse.dir/src/WaveCollapseInt.cpp.o
 libWaveCollapse.a: CMakeFiles/WaveCollapse.dir/build.make
 libWaveCollapse.a: CMakeFiles/WaveCollapse.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libWaveCollapse.a"

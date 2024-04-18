@@ -6,3 +6,7 @@ WaveCollapse.egg-info/dependency_links.txt
 WaveCollapse.egg-info/not-zip-safe
 WaveCollapse.egg-info/requires.txt
 WaveCollapse.egg-info/top_level.txt
+src/__init__.py
+src/_version.py
+src/tests/__init__.py
+src/tests/test_waveCollapse.py

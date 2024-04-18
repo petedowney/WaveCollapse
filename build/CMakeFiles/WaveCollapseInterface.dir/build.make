@@ -69,33 +69,34 @@ include CMakeFiles/WaveCollapseInterface.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/WaveCollapseInterface.dir/flags.make
 
-CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o: CMakeFiles/WaveCollapseInterface.dir/flags.make
-CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o: ../src/WaveCollapseInterface.cpp
-CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o: CMakeFiles/WaveCollapseInterface.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o -MF CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o.d -o CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp
+CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o: CMakeFiles/WaveCollapseInterface.dir/flags.make
+CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o: ../src/WaveCollapseInt.cpp
+CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o: CMakeFiles/WaveCollapseInterface.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o -MF CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o.d -o CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o -c /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInt.cpp
 
-CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp > CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.i
+CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInt.cpp > CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.i
 
-CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInterface.cpp -o CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.s
+CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petedowney/Documents/GitHub/WaveCollapse/src/WaveCollapseInt.cpp -o CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.s
 
 # Object files for target WaveCollapseInterface
 WaveCollapseInterface_OBJECTS = \
-"CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o"
+"CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o"
 
 # External object files for target WaveCollapseInterface
 WaveCollapseInterface_EXTERNAL_OBJECTS =
 
-WaveCollapseInterface.cpython-311-darwin.so: CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInterface.cpp.o
+WaveCollapseInterface.cpython-311-darwin.so: CMakeFiles/WaveCollapseInterface.dir/src/WaveCollapseInt.cpp.o
 WaveCollapseInterface.cpython-311-darwin.so: CMakeFiles/WaveCollapseInterface.dir/build.make
 WaveCollapseInterface.cpython-311-darwin.so: libWaveCollapse.a
 WaveCollapseInterface.cpython-311-darwin.so: CMakeFiles/WaveCollapseInterface.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module WaveCollapseInterface.cpython-311-darwin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WaveCollapseInterface.dir/link.txt --verbose=$(VERBOSE)
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -x /Users/petedowney/Documents/GitHub/WaveCollapse/build/WaveCollapseInterface.cpython-311-darwin.so
 
 # Rule to build all files generated by this target.
 CMakeFiles/WaveCollapseInterface.dir/build: WaveCollapseInterface.cpython-311-darwin.so
