@@ -16,7 +16,7 @@
 class WaveCollapse : public std::enable_shared_from_this<WaveCollapse>{
 
 public:
-    WaveCollapse(std::vector<float> STDStates, std::vector<Constraint> constraints, int chunkSize);
+    WaveCollapse(std::vector<float> STDStates, std::vector<Constraint> constraints, int chunkSize, int initCollapse=-1);
 
     void GenerateChunk(int x, int y, bool collapse=true);
     bool containsChunk(int x, int y);
@@ -31,6 +31,7 @@ public:
 private:
     std::unordered_map <int, std::unordered_map<int, std::shared_ptr<Chunk>>> chunkMap;
     int size;
+    int initCollapse;
     std::vector<float> STDStates;
     std::vector<Constraint> constraints;
     void addAntiConstraints();

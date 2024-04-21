@@ -24,20 +24,37 @@ PYBIND11_MODULE(WaveCollapseInterface, m) {
 
     pybind11::enum_<Type>(m, "Type")
         .value("CORD", Type::CORD)
+        .value("RADIUS", Type::RADIUS)
+        .value("SQUARE", Type::SQUARE)
         .export_values();
 
     pybind11::class_<Constraint>(m, "Constraint")
-        .def(pybind11::init<Type, int, int, std::vector<int>>(), 
-        pybind11::arg("ConstraintType") = Type::CORD, pybind11::arg("causingState") = 0, 
-        pybind11::arg("effectedState") = 0, pybind11::arg("miscArgs") = std::vector<int>())
-        
+        .def(pybind11::init([](Type ConstraintType, int causingState, int effectedState, std::vector<int> miscArgs, bool collapseTo) {
+            return Constraint{ConstraintType, causingState, effectedState, miscArgs, collapseTo};
+        }), pybind11::arg("ConstraintType") = Type::CORD, pybind11::arg("causingState") = 0, 
+        pybind11::arg("effectedState") = 0, pybind11::arg("miscArgs") = std::vector<int>(), 
+        pybind11::arg("collapseTo") = false)
         .def_readwrite("ConstraintType", &Constraint::ConstraintType)
         .def_readwrite("causingState", &Constraint::causingState)
         .def_readwrite("effectedState", &Constraint::effectedState)
-        .def_readwrite("miscArgs", &Constraint::miscArgs);
+        .def_readwrite("miscArgs", &Constraint::miscArgs)
+        .def_readwrite("collapseTo", &Constraint::collapseTo);
+
+    /*pybind11::class_<WaveCollapse, std::shared_ptr<WaveCollapse>>(m, "WaveCollapse")
+        .def(pybind11::init<std::vector<float>, std::vector<Constraint>, int, int>())
+        .def("generateChunk", &WaveCollapse::GenerateChunk)
+        .def("containsChunk", &WaveCollapse::containsChunk)
+        .def("collapseChunk", (void (WaveCollapse::*)(int, int)) &WaveCollapse::collapseChunk)
+        .def("collapseChunk", (void (WaveCollapse::*)(std::shared_ptr<Chunk>)) &WaveCollapse::collapseChunk)
+        .def("setSeed", &WaveCollapse::setSeed)
+        .def("getChunk", &WaveCollapse::getChunk)
+        .def("getChunkSize", &WaveCollapse::getChunkSize);*/
 
     pybind11::class_<WaveCollapse, std::shared_ptr<WaveCollapse>>(m, "WaveCollapse")
-        .def(pybind11::init<std::vector<float>, std::vector<Constraint>, int>())
+        .def(pybind11::init([](std::vector<float> STDStates, std::vector<Constraint> constraints, int chunkSize, int initCollapse) {
+            return std::make_shared<WaveCollapse>(STDStates, constraints, chunkSize, initCollapse);
+        }), pybind11::arg("STDStates") = std::vector<float>(), pybind11::arg("constraints") = std::vector<Constraint>(), 
+        pybind11::arg("chunkSize"), pybind11::arg("initCollapse") = -1)
         .def("generateChunk", &WaveCollapse::GenerateChunk)
         .def("containsChunk", &WaveCollapse::containsChunk)
         .def("collapseChunk", (void (WaveCollapse::*)(int, int)) &WaveCollapse::collapseChunk)
@@ -47,20 +64,22 @@ PYBIND11_MODULE(WaveCollapseInterface, m) {
         .def("getChunkSize", &WaveCollapse::getChunkSize);
 
     pybind11::class_<Chunk, std::shared_ptr<Chunk>>(m, "Chunk")
-        .def(pybind11::init<int, int, int, std::vector<float>, const std::vector<Constraint>&>())
+        .def(pybind11::init<int, int, int, std::vector<float>, const std::vector<Constraint>&, int>())
         .def("collapse", &Chunk::collapse)
         .def("getTile", &Chunk::getTile)
-        .def("getCollapsedTileState", (int (Chunk::*)(int, int)) &Chunk::getCollapsedTileState)
-        .def("getCollapsedTileState", (int (Chunk::*)(std::shared_ptr<Tile>)) &Chunk::getCollapsedTileState)
         .def("getSize", &Chunk::getSize)
         .def("getLocation", &Chunk::getLocation)
-        .def("collapseTile", (void (Chunk::*)(int, int, int)) &Chunk::collapseTile)
-        .def("collapseTile", (void (Chunk::*)(std::shared_ptr<Tile>, int)) &Chunk::collapseTile);
+        .def("getState", &Chunk::getState)
+        .def("getCollapse", &Chunk::getCollapse);
+        
 
     pybind11::class_<Tile, std::shared_ptr<Tile>>(m, "Tile")
-    .def(pybind11::init([](std::vector<float> state, bool collapsed) {
-        return std::make_shared<Tile>(state, collapsed);
-    }), pybind11::arg("state") = std::vector<float>(), pybind11::arg("collapsed") = false)
+    .def(pybind11::init([](std::vector<float> state) {
+        return std::make_shared<Tile>(state);
+    }), pybind11::arg("state") = std::vector<float>())
     .def_readwrite("state", &Tile::state)
-    .def_readwrite("collapsed", &Tile::collapsed);
+    .def_readwrite("collapsed", &Tile::collapsed)
+    .def_readwrite("collapsedState", &Tile::collapsedState);
+    
+    
 }

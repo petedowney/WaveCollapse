@@ -6,23 +6,22 @@
 
 #include <utility>
 
-WaveCollapse::WaveCollapse(std::vector<float> STDStates, std::vector<Constraint> constraints, int chunkSize) {
+WaveCollapse::WaveCollapse(std::vector<float> STDStates, std::vector<Constraint> constraints, int chunkSize, int initCollapse) {
 
     this->STDStates = std::move(STDStates);
     this->constraints = std::move(constraints);
     this->size = chunkSize;
-
-    //addAntiConstraints();
+    this->initCollapse = initCollapse;
 }
 
 void WaveCollapse::GenerateChunk(int x, int y, bool collapse) {
-    
+
     if (chunkMap.contains(x) && chunkMap[x].contains(y)) return;
 
-
-    std::shared_ptr<Chunk> chunk = std::make_shared<Chunk>(x, y, size, STDStates, constraints);
+    std::shared_ptr<Chunk> chunk = std::make_shared<Chunk>(x, y, size, STDStates, constraints, initCollapse);
 
     if (collapse) collapseChunk(chunk);
+
 
     std::pair<int, std::shared_ptr<Chunk>> yCord {y, chunk};
     if (chunkMap.contains(x)) {

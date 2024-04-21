@@ -1,6 +1,0 @@
-/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/rebuild_cache.dir
-/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/edit_cache.dir
-/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/WaveCollapseInterface.dir
-/Users/petedowney/Documents/GitHub/WaveCollapse/build/CMakeFiles/WaveCollapse.dir
-/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-build/CMakeFiles/rebuild_cache.dir
-/Users/petedowney/Documents/GitHub/WaveCollapse/build/_deps/boost_unordered-build/CMakeFiles/edit_cache.dir
