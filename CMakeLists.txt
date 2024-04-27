@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 project(WaveCollapse)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 if (NOT boost_unordered_FOUND)
     include(FetchContent)
