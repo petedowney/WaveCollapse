@@ -1,3 +1,5 @@
 build/*
 *pycache*
 *.egg-info/*
+
+.fake

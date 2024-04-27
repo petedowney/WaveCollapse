@@ -11,13 +11,12 @@
 #include <iostream>
 #include <memory>
 
-enum Type {CORD, CCORD,  RADIUS, SQUARE};
+enum Type {CORD, RADIUS, SQUARE};
 
 struct Constraint {
     Type ConstraintType{CORD};
-    int causingState{};
-    int effectedState{0};
-    std::vector<int> miscArgs;
+    std::vector<std::tuple<int, int, int>> offsets;
+    int effectedState{-1};
     bool collapseTo{false};
 };
 
@@ -52,6 +51,10 @@ private:
     int chunkX, chunkY, size;
     int initCollapse;
 
+    Tile getTileCopy(int x, int y);
+
+    std::vector<float> defaultState;
+
     bool allCollapsedCheck();
     int partiallyCollapseTile(std::shared_ptr<Tile> tile, int collapseToZero);
 
@@ -59,15 +62,15 @@ private:
 
     std::tuple<int, int, int> randomCollapse();
 
-    void collapseTile(int collapseX, int collapseY, int state);
-    void collapseTile(std::shared_ptr<Tile> tile, int state);
+    bool collapseTile(int collapseX, int collapseY, int state);
+    bool collapseTile(std::shared_ptr<Tile> tile, int state);
 
     //split up the collapsing chunk into smaller funcs
     void collapseChunkCord(std::vector<std::shared_ptr<Chunk>> nearbyChunks, std::vector<std::tuple<int, int>> nearbyChunkCords);
     void collapseChunkRadius(std::vector<std::shared_ptr<Chunk>> nearbyChunks, std::vector<std::tuple<int, int>> nearbyChunkCords);
     void collapseChunkSquare(std::vector<std::shared_ptr<Chunk>> nearbyChunks, std::vector<std::tuple<int, int>> nearbyChunkCords);
 
-    std::shared_ptr<Tile> getOtherChunksTile(std::vector<std::shared_ptr<Chunk>> nearbyChunks, std::vector<std::tuple<int, int>> nearbyChunkCords, int xOffset, int yOffset);
+    Tile getOtherChunksTile(std::vector<std::shared_ptr<Chunk>> nearbyChunks, std::vector<std::tuple<int, int>> nearbyChunkCords, int xOffset, int yOffset);
 };
 
 

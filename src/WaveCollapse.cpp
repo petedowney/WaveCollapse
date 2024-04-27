@@ -22,7 +22,6 @@ void WaveCollapse::GenerateChunk(int x, int y, bool collapse) {
 
     if (collapse) collapseChunk(chunk);
 
-
     std::pair<int, std::shared_ptr<Chunk>> yCord {y, chunk};
     if (chunkMap.contains(x)) {
         chunkMap[x].insert(yCord);
@@ -63,7 +62,7 @@ void WaveCollapse::collapseChunk(std::shared_ptr<Chunk> chunk) {
             }
         }
     }
-
+    
     chunk->collapse(nearbyChunks, nearbyChunkCords);
 }
 
@@ -78,7 +77,7 @@ int WaveCollapse::getChunkSize() {
 }
 
 void WaveCollapse::addAntiConstraints() {
-    //TODO check if anticonstraint already exists
+    /*//TODO check if anticonstraint already exists
     int origConstraintLength = constraints.size();
 
     for (int n = 0; n < origConstraintLength; n++) {
@@ -101,6 +100,6 @@ void WaveCollapse::addAntiConstraints() {
                 break;
         }
         constraints.emplace_back(antiConstraint);
-    }
+    }*/
 }
 

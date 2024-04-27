@@ -29,27 +29,15 @@ PYBIND11_MODULE(WaveCollapseInterface, m) {
         .export_values();
 
     pybind11::class_<Constraint>(m, "Constraint")
-        .def(pybind11::init([](Type ConstraintType, int causingState, int effectedState, std::vector<int> miscArgs, bool collapseTo) {
-            return Constraint{ConstraintType, causingState, effectedState, miscArgs, collapseTo};
-        }), pybind11::arg("ConstraintType") = Type::CORD, pybind11::arg("causingState") = 0, 
-        pybind11::arg("effectedState") = 0, pybind11::arg("miscArgs") = std::vector<int>(), 
-        pybind11::arg("collapseTo") = false)
+        .def(pybind11::init([](Type ConstraintType, std::vector<std::tuple<int, int, int>> offsets, int effectedState, bool collapseTo) {
+            return Constraint{ConstraintType, offsets, effectedState, collapseTo};
+        }), pybind11::arg("ConstraintType") = Type::CORD, pybind11::arg("offsets") = std::vector<std::tuple<int, int, int>>(),
+        pybind11::arg("effectedState") = -1, pybind11::arg("collapseTo") = false)
         .def_readwrite("ConstraintType", &Constraint::ConstraintType)
-        .def_readwrite("causingState", &Constraint::causingState)
+        .def_readwrite("offsets", &Constraint::offsets)
         .def_readwrite("effectedState", &Constraint::effectedState)
-        .def_readwrite("miscArgs", &Constraint::miscArgs)
         .def_readwrite("collapseTo", &Constraint::collapseTo);
-
-    /*pybind11::class_<WaveCollapse, std::shared_ptr<WaveCollapse>>(m, "WaveCollapse")
-        .def(pybind11::init<std::vector<float>, std::vector<Constraint>, int, int>())
-        .def("generateChunk", &WaveCollapse::GenerateChunk)
-        .def("containsChunk", &WaveCollapse::containsChunk)
-        .def("collapseChunk", (void (WaveCollapse::*)(int, int)) &WaveCollapse::collapseChunk)
-        .def("collapseChunk", (void (WaveCollapse::*)(std::shared_ptr<Chunk>)) &WaveCollapse::collapseChunk)
-        .def("setSeed", &WaveCollapse::setSeed)
-        .def("getChunk", &WaveCollapse::getChunk)
-        .def("getChunkSize", &WaveCollapse::getChunkSize);*/
-
+        
     pybind11::class_<WaveCollapse, std::shared_ptr<WaveCollapse>>(m, "WaveCollapse")
         .def(pybind11::init([](std::vector<float> STDStates, std::vector<Constraint> constraints, int chunkSize, int initCollapse) {
             return std::make_shared<WaveCollapse>(STDStates, constraints, chunkSize, initCollapse);

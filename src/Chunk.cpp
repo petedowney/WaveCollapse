@@ -20,7 +20,7 @@ Chunk::Chunk(const int x, const int y, const int size, const std::vector<float>&
         }
     }
 
-
+    this->defaultState = defaultState;
     this->chunkX = x;
     this->chunkY = y;
     this->size = size;
@@ -32,144 +32,80 @@ bool Chunk::getCollapse() {
 }
 
 bool Chunk::collapse(std::vector<std::shared_ptr<Chunk>> nearbyChunks, std::vector<std::tuple<int, int>> nearbyChunkCords) {
-    
-    std::queue<TUP> flagged;
 
-    // chunking logic
-    if (!nearbyChunks.empty()) {
-
-        for (int n = 0; n < nearbyChunks.size(); n++) {
-            if (nearbyChunks[n]->getCollapse()) {
-                
-                auto [xOffset, yOffset] = nearbyChunkCords[n];
-                xOffset *= size;
-                yOffset *= size;
-
-                auto nearbyChunksState = nearbyChunks[n]->getState();
-
-                for (int tileX = 0; tileX < size; tileX++) {
-                    for (int tileY = 0; tileY < size; tileY++) {
-
-                        flagged.emplace(TUP(xOffset+tileX, yOffset+tileY, nearbyChunksState[tileX][tileY]->collapsedState));
-                    }
-                }
-            }
-            //flagged.emplace()
-        }
-    }
-
+    //TODO multithread
     //begin collapsing
+    
+
+    bool isChunkCollapsed = false;
+
     while (!isChunkCollapsed) {
 
-        int nextX, nextY;
-        int nextTile;
+        bool stateCollapsed = false;
+        do {
+            
+            stateCollapsed = false;
 
-        int sum = 0;
-        for (int n1 = 0; n1 < state.size(); n1++) {
-            for (int n2 = 0; n2 < state[n1].size(); n2++) {
-                sum += state[n1][n2]->collapsed;
-            }
-        }
-        // if queue is empty collapses tile and adds to queue
-        if (flagged.empty()) {
-            if (allCollapsedCheck()) return true;
-            flagged.emplace(randomCollapse());
-        // pops out a val from queu
-        } else {
-            auto [a, b, c] = flagged.front();
-            nextX = a;
-            nextY = b;
-            nextTile = c;
-            flagged.pop();
-        }
-        //collapses other tiles based off of constraints
-        for (int n = 0; n < constraints.size(); n++) {
-            Type cType = constraints[n].ConstraintType;
-            if (constraints[n].causingState == nextTile) {
-                switch (cType) {
-                    case RADIUS:
-                        
-                        int radius = constraints[n].miscArgs[0];
-                        for (int squareX = 0; squareX < radius; squareX++) {
-                            for (int squareY = 0; squareY < radius; squareY++) {
+            for (int tileX = 0; tileX < size; tileX++) {
+                for (int tileY = 0; tileY < size; tileY++) {
+ 
+                    //tile already collapsed skip
+                    if (getTile(tileX, tileY)->collapsed) continue;
 
-                                int distance = abs(squareX - nextX) + abs(squareY - nextY);
+                    //goes through all constraints
+                    for (int constraintIndex = 0; constraintIndex < constraints.size(); constraintIndex++) {
 
-                                if (distance <= constraints[n].miscArgs[0] && withinChunk(squareX+nextX, squareY+nextY)) {
-                                    std::shared_ptr<Tile> tile = getTile(squareX+nextX, squareY+nextY);
-                                    if (!tile->collapsed) {
-                                        if (constraints[n].collapseTo) {
-                                            collapseTile(tile, constraints[n].effectedState);
-                                            flagged.emplace(TUP(squareX+nextX, squareY+nextY, tile->collapsedState));
-                                        } else {
-                                            int collapsedIndex = partiallyCollapseTile(tile, constraints[n].effectedState);
-                                            if (collapsedIndex != -1) flagged.emplace(TUP(squareX+nextX, squareY+nextY, tile->collapsedState));
-                                        }
+                        Type cType = constraints[constraintIndex].ConstraintType;
+
+                        switch (cType) {
+                            case RADIUS:
+
+                            case SQUARE:
+
+                                break;
+
+                            case CORD: {
+                                bool fullMatch = true;
+                                for (int term = 0; term < constraints[constraintIndex].offsets.size(); term++) {
+                                    
+                                    int x = tileX + get<0>(constraints[constraintIndex].offsets[term]);
+                                    int y = tileY + get<1>(constraints[constraintIndex].offsets[term]);
+
+                                    Tile tile = getOtherChunksTile(nearbyChunks, nearbyChunkCords, x, y);
+
+                                    if (tile.state[0] == -1) {
+                                        float tempRand = rand() / RAND_MAX;
+                                        fullMatch = false; //rand() < defaultState[get<2>(constraints[constraintIndex].offsets[term])];
+                                        if (!fullMatch) break;
+                                    }
+                                    if (tile.collapsedState != get<2>(constraints[constraintIndex].offsets[term])) {
+                                        fullMatch = false;
+                                        break;
                                     }
                                 }
-                            }
-                        }
-                        break;
-
-                    case SQUARE:
-                        
-                        int radius = constraints[n].miscArgs[0];
-                        for (int squareX = 0; squareX < radius; squareX++) {
-                            for (int squareY = 0; squareY < radius; squareY++) {
-
-                                int distance = abs(squareX - nextX) + abs(squareY - nextY);
-
-                                if (withinChunk(squareX+nextX, squareY+nextY)) {
-                                    std::shared_ptr<Tile> tile = getTile(squareX+nextX, squareY+nextY);
-                                    if (!tile->collapsed) {
-                                        if (constraints[n].collapseTo) {
-                                            collapseTile(tile, constraints[n].effectedState);
-                                            flagged.emplace(TUP(squareX+nextX, squareY+nextY, tile->collapsedState));
-                                        } else {
-                                            int collapsedIndex = partiallyCollapseTile(tile, constraints[n].effectedState);
-                                            if (collapsedIndex != -1) flagged.emplace(TUP(squareX+nextX, squareY+nextY, tile->collapsedState));
-                                        }
+                                if (fullMatch) {
+                                    if (constraints[constraintIndex].collapseTo) {
+                                        bool fullCollapsed = collapseTile(getTile(tileX, tileY), constraints[constraintIndex].effectedState);
+                                        if (fullCollapsed) stateCollapsed = true;
+                                    } else {
+                                        int fullCollapsed = partiallyCollapseTile(getTile(tileX, tileY), constraints[constraintIndex].effectedState);
+                                        if (fullCollapsed != -1) stateCollapsed = true;
                                     }
                                 }
+                                break;
                             }
                         }
-                        break;
-
-                    case CORD: {
-                        
-                        //gets relative cords
-                        int tileX = nextX + constraints[n].miscArgs[0];
-                        int tileY = nextY + constraints[n].miscArgs[1];
-                        
-                        //if within the chunk
-                        if (withinChunk(tileX, tileY)) {
-
-                            std::shared_ptr<Tile> tile = getTile(tileX, tileY);
-
-                            //checks if collapsed
-                            if (!tile->collapsed) {
-                                
-                                if (constraints[n].collapseTo) {
-                                    collapseTile(tile, constraints[n].effectedState);
-                                    flagged.emplace(TUP(tileX, tileY, tile->collapsedState));
-                                } else {
-                                    int collapsedIndex = partiallyCollapseTile(tile, constraints[n].effectedState);
-                                    if (collapsedIndex != -1) flagged.emplace(TUP(tileX, tileY, tile->collapsedState));
-                                }
-                            }        
-                        }
-                        break;
                     }
 
-                    case CCORD: {
-                        
 
-                    }
-
-                    break;
                 }
             }
-        }
+        } while (stateCollapsed);
+        
+        isChunkCollapsed = allCollapsedCheck();
+
+        if (!isChunkCollapsed)
+            randomCollapse();
     }
 
     return true;
@@ -190,15 +126,27 @@ bool Chunk::allCollapsedCheck() {
 
 // TODO add to collapsed list
 int Chunk::partiallyCollapseTile(std::shared_ptr<Tile> tile, int collapseToZero) {
-        tile->state.at(collapseToZero) = 0;
+       
+       if (tile->state.at(collapseToZero) == 1 || tile->collapsed) return -1;
+       tile->state.at(collapseToZero) = 0;
+
         float sum = 0;
         for (float n : tile->state) {
             sum += n;
         }
         if (sum == 0) return -1;
+
+        int loop = 0;
+
         for (int n = 0; n < tile->state.size(); n++) {
+
+            loop++;
+            if (loop > 1000) {
+                std::cout<<"loop"<<std::endl;
+                return -1;
+            }
             tile->state.at(n) /= sum;
-            if (1 - tile->state.at(n) < .0001) {
+            if (tile->state.at(n) > .999) {
                 tile->collapsed = true;
                 tile->collapsedState = n;
                 return n;
@@ -207,16 +155,33 @@ int Chunk::partiallyCollapseTile(std::shared_ptr<Tile> tile, int collapseToZero)
         return -1;
 }
 
+//Dont have other chunks call
+// seg fauls sometimes?
 std::shared_ptr<Tile> Chunk::getTile(int x, int y) {
     return state[x][y];
 }
+
+Tile Chunk::getTileCopy(int x, int y) {
+    return *(state[x][y]);
+}
+
 
 std::tuple<int, int, int> Chunk::randomCollapse() {
     
     //TODO make this not awful
     bool valid = false;
     int x, y;
+
+    int n = 0;
+
     while (!valid) {
+
+        n++;
+        std::cout<<"random "<< n << std::endl;
+        if (n > 1000) {
+            std::cout<<"random"<<std::endl;
+            return TUP(-1, -1, -1);
+        }
         x = (((double) rand() / (RAND_MAX)) * state.size());
         y = (((double) rand() / (RAND_MAX)) * state.size());
 
@@ -245,15 +210,18 @@ std::tuple<int, int, int> Chunk::randomCollapse() {
     return TUP(x, y, tile->collapsedState);
 }
 
-void Chunk::collapseTile(std::shared_ptr<Tile> tile, int collapseToOne) {
+bool Chunk::collapseTile(std::shared_ptr<Tile> tile, int collapseToOne) {
+
+    if (tile->state[collapseToOne] == 0) return false;
     std::fill(tile->state.begin(), tile->state.end(), 0);
     tile->state.at(collapseToOne) = 1;
     tile->collapsedState = collapseToOne;
     tile->collapsed = true;
+    return true;
 }
 
-void Chunk::collapseTile(int collapseX, int collapseY, int collapseToOne) {
-    collapseTile(getTile(chunkX, chunkY), collapseToOne);
+bool Chunk::collapseTile(int collapseX, int collapseY, int collapseToOne) {
+    return collapseTile(getTile(chunkX, chunkY), collapseToOne);
 }
 
 int Chunk::getSize() {return size;}
@@ -272,7 +240,7 @@ bool Chunk::withinChunk(int x, int y) {
 }
 
 
-std::shared_ptr<Tile> Chunk::getOtherChunksTile(std::vector<std::shared_ptr<Chunk>> nearbyChunks, std::vector<std::tuple<int, int>> nearbyChunkCords, int xOffset, int yOffset) {
+Tile Chunk::getOtherChunksTile(std::vector<std::shared_ptr<Chunk>> nearbyChunks, std::vector<std::tuple<int, int>> nearbyChunkCords, int xOffset, int yOffset) {
 
     int chunkX = xOffset / size;
     int chunkY = yOffset / size;
@@ -280,18 +248,22 @@ std::shared_ptr<Tile> Chunk::getOtherChunksTile(std::vector<std::shared_ptr<Chun
     chunkX += xOffset < 0 ? -1 : 0;
     chunkY += yOffset < 0 ? -1 : 0;
 
+    if (chunkX == 0 && chunkY == 0) return *getTile(xOffset, yOffset);
+
     int tileX = xOffset % size;
     int tileY = yOffset % size;
 
-    tileX = tileX < 0 ? size : tileX;
-    tileY = tileY < 0 ? size : tileX;
+    tileX += tileX < 0 ? size : 0;
+    tileY += tileY < 0 ? size : 0;
 
     //TODO make this not awful
     for (int n = 0; n < nearbyChunks.size(); n++) {
-        auto [x, y] = nearbyChunks[n]->getLocation();
+        auto [x, y] = nearbyChunkCords.at(n);
         if (x == chunkX && y == chunkY) {
-            return nearbyChunks[n]->getTile(tileX, tileY);
+
+            return nearbyChunks[n]->getTileCopy(tileX, tileY);
         }
     }
 
+    return Tile{std::vector<float>{-1}};
 }
