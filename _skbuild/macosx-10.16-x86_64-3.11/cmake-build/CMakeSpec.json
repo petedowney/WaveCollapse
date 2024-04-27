@@ -1,1 +1,0 @@
-{"args": ["/usr/local/bin/cmake", "-DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=10.16", "-DCMAKE_OSX_ARCHITECTURES:STRING=x86_64", "-DCMAKE_BUILD_TYPE:STRING=Release"], "version": "3.21.3", "environment": {"PYTHONNOUSERSITE": "1", "PYTHONPATH": "/private/var/folders/h8/pnzhwplx7lb86fpd7pc_71_c0000gn/T/pip-build-env-3b3a4j45/site"}}

@@ -1,1 +1,0 @@
-/Users/petedowney/Documents/GitHub/WaveCollapse/_skbuild/macosx-10.16-x86_64-3.12/cmake-install/src/lib/WaveCollapseInterface.cpython-312-darwin.so
