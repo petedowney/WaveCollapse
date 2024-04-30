@@ -55,6 +55,7 @@ jobs:
         run: |
           conda install pytest 
           conda install pip
+          pip install .
           pip install pytest-cov  
           pytest --cov=./src/tests 
       - name: Upload coverage reports to Codecov
