@@ -22,14 +22,14 @@ jobs:
         channels: conda-forge,defaults
 
     - name: Install package
-      shell: bash -l {0}
       run: |
         conda install -c conda-forge pybind11
+        conda install pytest
         conda install pip
+        conda install pybind11
         pip install .
     - name: Test with pytest
       run: |
-        conda install pytest
         pip install pytest-cov  # Install pytest-cov
         pytest --cov=./src/tests  # Run pytest with coverage
     - name: Upload coverage reports to Codecov
