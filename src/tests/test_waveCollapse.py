@@ -107,3 +107,71 @@ def test_constraintCollapse():
                 assert waveCollapse.getChunk(0, 0).getTile(x, y-1).collapsedState == opp
             if (y < 14):
                 assert waveCollapse.getChunk(0, 0).getTile(x, y+1).collapsedState == opp
+
+
+
+def test_Radius():
+    
+    for radius in range(1, 5):
+        constraints = [None]*5
+
+        radius = 1
+
+        constraints[0] = WCI.Constraint(WCI.Type.RADIUS, [(radius, 0, 0)], 0, False)
+        constraints[1] = WCI.Constraint(WCI.Type.RADIUS, [(radius, 0, 1)], 1, False)
+        constraints[2] = WCI.Constraint(WCI.Type.RADIUS, [(radius, 0, 2)], 2, False)
+        constraints[3] = WCI.Constraint(WCI.Type.RADIUS, [(radius, 0, 3)], 3, False)
+        constraints[4] = WCI.Constraint(WCI.Type.RADIUS, [(radius, 0, 4)], 4, False)
+
+        state = [.1, .1, .1, .1, .1, .5]
+        
+        waveCollapse = WCI.WaveCollapse(state, constraints, 10 + radius * 2, -1)
+
+        waveCollapse.generateChunk(0, 0, True)
+
+        for x in range(1, 8):
+            for y in range(1, 8):
+                
+                middle = waveCollapse.getChunk(0, 0).getTile(x, y).collapsedState
+
+                if (middle == 5):
+                    continue
+                
+                for xRad in range(-radius, radius+1):
+                    for yRad in range(-radius, radius+1):
+                        
+                        if (xRad != 0 or yRad != 0) and (xRad**2 + yRad**2 <= radius**2):
+                            assert waveCollapse.getChunk(0, 0).getTile(x+xRad, y+yRad).collapsedState != middle
+
+
+def test_Square():
+
+    for Height in range(1, 5):
+        for Width in range(1, 5):
+            constraints = [None]*5
+
+            constraints[0] = WCI.Constraint(WCI.Type.SQUARE, [(Width, Height, 0)], 0, False)
+            constraints[1] = WCI.Constraint(WCI.Type.SQUARE, [(Width, Height, 1)], 1, False)
+            constraints[2] = WCI.Constraint(WCI.Type.SQUARE, [(Width, Height, 2)], 2, False)
+            constraints[3] = WCI.Constraint(WCI.Type.SQUARE, [(Width, Height, 3)], 3, False)
+            constraints[4] = WCI.Constraint(WCI.Type.SQUARE, [(Width, Height, 4)], 4, False)
+
+            state = [.1, .1, .1, .1, .1, .5]
+            
+            waveCollapse = WCI.WaveCollapse(state, constraints, 12, -1)
+
+            waveCollapse.generateChunk(0, 0, True)
+
+            for x in range(Width, 10-Width):
+                for y in range(Height, 10-Height):
+                    
+                    middle = waveCollapse.getChunk(0, 0).getTile(x, y).collapsedState
+
+                    if (middle == 5):
+                        continue
+                    
+                    for xRad in range(-Width, Width-1):
+                        for yRad in range(-Height, Height-1):
+                            if ((xRad != 0 or yRad != 0)):
+                                assert waveCollapse.getChunk(0, 0).getTile(x+xRad, y+yRad).collapsedState != middle
+                                
