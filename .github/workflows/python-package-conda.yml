@@ -50,15 +50,15 @@ jobs:
           python -m pip install . --no-deps
           micromamba list
 
-      - name: Run tests
-        # conda setup requires this special shell
-        shell: bash -l {0}
+      - name: Test with pytest
+          #likely partially redundant with the conda setup
         run: |
-          pytest -v --cov=MonteCarloAlgorithm --cov-report=xml --color=yes MonteCarloAlgorithm/tests/
-
-      - name: CodeCov
-        uses: codecov/codecov-action@v1
+          conda install pytest 
+          conda install pip
+          pip install pytest-cov  
+          pytest --cov=./src/tests 
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
         with:
-          file: ./coverage.xml
-          flags: unittests
-          name: codecov-${{ matrix.os }}-py${{ matrix.python-version }}
+          token: ${{ secrets.CODECOV_TOKEN }}
+  
