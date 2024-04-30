@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [macOS-latest, ubuntu-latest, windows-latest]
         python-version: [3.9, "3.10", "3.11"]
 
     steps:
@@ -17,24 +17,35 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Add conda to system path
+      run: |
+        
+        if [[ "$RUNNER_OS" == "macOS" ]]; then
+          brew install --cask miniconda
+        elif [[ "$RUNNER_OS" == "Windows" ]]; then
+          choco install miniconda3
+        fi
+        # $CONDA is an environment variable pointing to the root of the miniconda directory
+        echo $CONDA/bin >> $GITHUB_PATH
+    - name: Install dependencies
+      run: |
+        conda env update --file environment.yml --name base
 
-    - name: Install Library and dependancies
+    - name: Lint with flake8
+      run: |
+        conda install flake8
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
       run: |
         conda install pytest
         conda install pip
-        pip install --upgrade pip
-        pip install pybind11
         pip install .
-        
-    - name: Test with pytest
-      run: |
         pip install pytest-cov  # Install pytest-cov
         pytest --cov=./src/tests  # Run pytest with coverage
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-
-
-
-    
