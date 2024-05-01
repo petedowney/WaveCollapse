@@ -3,4 +3,5 @@ name: WC
 channels:
   - defaults
 dependencies:
+  - pybind11-global
   - pybind11
