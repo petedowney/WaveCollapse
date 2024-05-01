@@ -27,6 +27,8 @@ if (NOT pybind11_FOUND)
 
 endif()
 
+set(pybind11_DIR python_env/site-packages/pybind11/share/cmake/pybind11)
+
 include_directories(boost_unordered)
 include_directories(pybind11)
 

@@ -41,15 +41,11 @@ jobs:
         conda install pytest
         conda install pip
 
-        ls
-        
         mkdir build
         cd build
         cmake ..
         make
         cd ..
-
-
 
         pip install .
 
