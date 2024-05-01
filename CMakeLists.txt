@@ -15,11 +15,23 @@ if (NOT boost_unordered_FOUND)
     FetchContent_MakeAvailable(boost_unordered)
 endif()
 
-include_directories(boost_unordered)
+if (NOT pybind11_FOUND)
+    include(FetchContent)
+    FetchContent_Declare(
+            pybind11
+            GIT_REPOSITORY https://github.com/pybind/pybind11.git
+            GIT_TAG v2.8.0
+            GIT_SHALLOW ON)
 
+    FetchContent_MakeAvailable(pybind11)
+endif()
+
+include_directories(boost_unordered)
+include_directories(pybind11)
 
 find_package(Python COMPONENTS Interpreter Development)
 find_package(pybind11 CONFIG REQUIRED)
+
 
 
 #add_subdirectory(pybind11)
