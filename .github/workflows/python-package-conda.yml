@@ -37,10 +37,10 @@ jobs:
     - name: Install package
       shell: bash -l {0}
       run: |
-        conda install pybind11 -c conda-forge
+        
         conda install pytest
         conda install pip
-
+        pip install "pybind11[global]"
         mkdir build
         cd build
         cmake ..
