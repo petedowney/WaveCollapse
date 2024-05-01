@@ -24,6 +24,9 @@ if (NOT pybind11_FOUND)
             GIT_SHALLOW ON)
 
     FetchContent_MakeAvailable(pybind11)
+
+    # Configuration file generation
+    configure_file(config.ini.in config.ini @ONLY)
 endif()
 
 include_directories(boost_unordered)
