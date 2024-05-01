@@ -37,12 +37,21 @@ jobs:
     - name: Install package
       shell: bash -l {0}
       run: |
-        conda install -c conda-forge pybind11
+        conda install pybind11 -c conda-forge
         conda install pytest
         conda install pip
+
+        ls
+        
+        mkdir build
+        cd build
+        cmake ..
+        make
+        cd ..
+
+
+
         pip install .
-      env:
-        pybind11_DIR: ${{ github.workspace }}/path/to/pybind11  # Replace with the actual path
 
     - name: Test with pytest
       run: |
