@@ -5,7 +5,6 @@ import WaveCollapseInterface as WCI
 
 def test_Initiation():
     
-    
     constraints = [None]*2
 
     constraints[0] = WCI.Constraint(WCI.Type.CORD, [(1, 0, 0)], 1, False)
@@ -109,7 +108,6 @@ def test_constraintCollapse():
                 assert waveCollapse.getChunk(0, 0).getTile(x, y+1).collapsedState == opp
 
 
-
 def test_Radius():
     
     for radius in range(1, 5):
@@ -174,4 +172,3 @@ def test_Square():
                         for yRad in range(-Height, Height-1):
                             if ((xRad != 0 or yRad != 0)):
                                 assert waveCollapse.getChunk(0, 0).getTile(x+xRad, y+yRad).collapsedState != middle
-                                
