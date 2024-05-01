@@ -40,7 +40,7 @@ jobs:
         
         conda install pytest
         conda install pip
-
+        pip install "pybind11[global]"
 
         pip install .
 
