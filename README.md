@@ -9,8 +9,21 @@ The wave collapse algorithm works by first defining a default state - a column v
 
 This library implements a 2 dimensional classical version of this algorithm.
 
+## Installation  
+For installation, clone the repository, navigate to it and run the command:
+```bash
+pip install .
+```
+Sometimes a dependency of the library, pybind11, will not properly install some of its header files. In the case of this happening please run:
+```bash
+pip install "pybind11[global]"
+pip install .
+```
+
 ## Usage
 First download and install the library. Then import WaveCollapseInterface.
+
+Python examples have been added in the pythonExamples folder. In order to run these examples pygame must also be installed.
 
 To use this library first create a wave collapse object. In order to spread out computational intensity a chunking system has been implemented. The Wavecollapse object will generate discrete chunks. The size of these chunks can be determined by the user. To create these chunks call generateChunk(x, y, true) from the WC object. To create subsequent chunks call this same command at different x and y coordinates. 
 
