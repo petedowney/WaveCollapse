@@ -37,12 +37,13 @@ jobs:
     - name: Install package
       shell: bash -l {0}
       run: |
+        conda init
         conda activate WC
         python -m pip install .
 
     - name: Test with pytest
       run: |
-        pytest --cov=./srcPython/tests  # Run pytest with coverage
+        python -m pytest --cov=./srcPython/tests  # Run pytest with coverage
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
