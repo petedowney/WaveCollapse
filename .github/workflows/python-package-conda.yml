@@ -31,23 +31,18 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         environment-file: environment.yml
-        environment-name: test
+        environment-name: WC
         channels: conda-forge,defaults
 
     - name: Install package
       shell: bash -l {0}
       run: |
-        
-        conda install pytest
-        conda install pip
-        pip install "pybind11[global]"
-
-        pip install .
+        conda activate WC
+        python -m pip install .
 
     - name: Test with pytest
       run: |
-        pip install pytest-cov  # Install pytest-cov
-        pytest --cov=./src/tests  # Run pytest with coverage
+        pytest --cov=./srcPython/tests  # Run pytest with coverage
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1

@@ -1,6 +1,6 @@
 
 [build-system]
-requires = ["setuptools>=61.0", "versioningit~=2.0", "scikit-build"]
+requires = ["setuptools>=61.0", "versioningit~=2.0", "scikit-build", "pybind11[global]"]
 build-backend = "setuptools.build_meta"
 
 
@@ -105,10 +105,10 @@ filterwarnings = [
     "error",
     "ignore:(ast.Str|Attribute s|ast.NameConstant|ast.Num) is deprecated:DeprecationWarning:_pytest",
 ]
-testpaths = ["src/tests"]
+testpaths = ["srcPython/tests"]
 
 [tool.cibuildwheel]
-test-command = "pytest {project}/src/tests"
+test-command = "pytest {project}/srcPython/tests"
 test-extras = ["test"]
 test-skip = ["*universal2:arm64"]
 # Setuptools bug causes collision between pypy and cpython artifacts

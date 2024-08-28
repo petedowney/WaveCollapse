@@ -15,6 +15,9 @@ if (NOT boost_unordered_FOUND)
     FetchContent_MakeAvailable(boost_unordered)
 endif()
 
+
+#find_package(pybind11 REQUIRED)
+
 if (NOT pybind11_FOUND)
     include(FetchContent)
     FetchContent_Declare(
@@ -27,8 +30,8 @@ if (NOT pybind11_FOUND)
 
 endif()
 
-set(pybind11_DIR python_env/site-packages/pybind11/share/cmake/pybind11)
-
+#set(pybind11_DIR python_env/site-packages/pybind11/share/cmake/pybind11)
+set(PYBIND11_FINDPYTHON ON)
 include_directories(boost_unordered)
 include_directories(pybind11)
 
@@ -41,14 +44,14 @@ find_package(pybind11 CONFIG REQUIRED)
 #target_link_libraries(boost_unordered raylib raylib_cpp)
 
 add_library(WaveCollapse STATIC
-src/Chunk.h src/Chunk.cpp src/WaveCollapse.cpp 
-src/WaveCollapse.h src/WaveCollapseInt.cpp 
-src/WaveCollapseInt.h)
+srcCPP/Chunk.h srcCPP/Chunk.cpp srcCPP/WaveCollapse.cpp 
+srcCPP/WaveCollapse.h srcCPP/WaveCollapseInt.cpp 
+srcCPP/WaveCollapseInt.h)
 
 target_link_libraries(WaveCollapse boost_unordered pybind11::module)
 
 
-pybind11_add_module(WaveCollapseInterface src/WaveCollapseInt.cpp)
+pybind11_add_module(WaveCollapseInterface srcCPP/WaveCollapseInt.cpp)
 target_link_libraries(WaveCollapseInterface PRIVATE WaveCollapse)
 
 

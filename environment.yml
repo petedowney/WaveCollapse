@@ -2,5 +2,9 @@ name: WC
 
 channels:
   - defaults
+
 dependencies:
-  - "pybind11[global]"
+  - pytest
+  - pip
+  - pytest-cov
+
