@@ -39,6 +39,7 @@ jobs:
       run: |
         conda init
         conda activate WC
+        conda install -c conda-forge pybind11
         python -m pip install .
 
     - name: Test with pytest
