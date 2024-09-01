@@ -2,11 +2,9 @@ name: WC
 
 channels:
   - defaults
-  - conda-forge
 
 dependencies:
   - pytest
   - pip
   - pytest-cov
-  - pybind11
 
